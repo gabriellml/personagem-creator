@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/vapor">
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_lista_personagems_recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/activity_personagem"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    />
+
+    <Button
+        style="@style/ButtonStyle"
+        android:id="@+id/activity_lista_personagems_botao_batalha"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Batalha"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/activity_lista_personagems_botao_heroi"
+        app:layout_constraintEnd_toStartOf="@id/activity_lista_personagems_botao_heroi"
+        />
+
+    <Button
+
+        style="@style/ButtonStyle"
+        android:id="@+id/activity_lista_personagems_botao_heroi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Criar Personagem"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/light_grey"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/activity_lista_personagems_botao_batalha"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <FrameLayout
+        android:id="@+id/activity_lista_personagems_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
