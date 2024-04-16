@@ -43,11 +43,12 @@ class RegrasDeBatalha {
                     val progress = (personagem2.hpAtual.toFloat() / personagem2.hpMax.toFloat()) * 100
                     if (progress <= 50) {
                         if(progress <= 20) {
-                            Log.i(TAG, "executarTurno: MUDANDO A COR DO PERSONAGEM: ${personagem2.nome} PARA VERMELHO")
+                            // mudando a barra de hp para vermelho
                             withContext(Dispatchers.Main){
                                 binding.personagem2View.activityPersonagemBatalhaHealthProgressBar.setProgressTintList(ColorStateList.valueOf(Color.RED))
                             }
                         } else {
+                            // mudando a barra de hp para amarelo
                             withContext(Dispatchers.Main){
                                 binding.personagem2View.activityPersonagemBatalhaHealthProgressBar.setProgressTintList(ColorStateList.valueOf(Color.YELLOW))
                             }
@@ -62,11 +63,12 @@ class RegrasDeBatalha {
 
                     if(progress <= 50) {
                         if(progress <= 20){
-                            Log.i(TAG, "executarTurno: MUDANDO A COR DO PERSONAGEM: ${personagem1.nome} PARA VERMELHO")
+                            // mudando a barra de hp para vermelho
                             withContext(Dispatchers.Main){
                                 binding.personagem1View.activityPersonagemBatalhaHealthProgressBar.setProgressTintList(ColorStateList.valueOf(Color.RED))
                             }
                         } else {
+                            // mudando a barra de hp para amarelo
                             withContext(Dispatchers.Main){
                                 binding.personagem1View.activityPersonagemBatalhaHealthProgressBar.setProgressTintList(ColorStateList.valueOf(Color.YELLOW))
                             }
