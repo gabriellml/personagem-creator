@@ -23,7 +23,7 @@ class Personagem(
         level++
         when(classe) {
                 "Warrior" -> {
-                    hpMax += 10
+                    hpMax += 20
                     hpAtual += 10
                     if (level % 2 == 0) {
                         força += 2
@@ -34,7 +34,7 @@ class Personagem(
                     } else def++
                 }
                 "Archer" -> {
-                    hpMax += 8
+                    hpMax += 16
                     hpAtual += 8
                     if (level % 2 == 0) {
                         destreza += 2
@@ -46,7 +46,7 @@ class Personagem(
                 }
 
                 "Mage" -> {
-                    hpMax += 6.5
+                    hpMax += 13
                     hpAtual += 6.5
                     if (level % 2 == 0) {
                         inteligencia += 2
